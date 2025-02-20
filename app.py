@@ -18,5 +18,13 @@ st.header('Registrera ny vara')
 # findings = collection.find()
 # st.write(findings)
 
-register = st.form()
-register.input
+register = st.form('key')
+col1, col2, col3 = st.columns([3,1,3], vertical_alignment='bottom')
+with col1:
+    register.text_input("Vara")
+with col2:
+    register.text_input("Pris")
+with col3:
+    register.text_input('Butik')
+
+register.form_submit_button('skicka')
